@@ -94,17 +94,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-
-  &:hover {
-    color: #00BCF2;
-  }
-
-}
-
 // Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
   @font-face {
@@ -119,8 +108,25 @@ a {
 @include font-face(Systopie, '/font/systopie_bold', bold);
 @include font-face(Systopie, '/font/systopie_italic', normal, italic);
 
+$link-color: #009ECC;
+
+a, a:visited {
+  text-decoration: none;
+  color: $link-color;
+  font-weight: bold;
+
+  &:hover {
+    color: darken($link-color, 20%);
+  }
+}
+
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Systopie, sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 .nav {
@@ -135,15 +141,69 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#hero img {
-  max-width: 100%;
+#about {
+    margin-bottom: 2em;
 }
 
-#about {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: .5em;
+@media only screen and (max-width: 35em) {
+  .nav-pane {
+    display: none;
+  }
+  #logo {
+    height: 28px;
+    width: 90px;
+    margin: 4px;
+  }
+  #nav-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+    background: #eee;
+  }
+  #menu {
+    position: fixed;
+    top: 36px;
+    left: 0;
+    width: 100%;
+    font: 12px Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+  }
+  #menu-button {
+    float: right;
+    display: block;
+    height: 36px;
+    width: 36px;
+    font-size: 24px;
+    color: #111;
+  }
+  body {
+    margin-top: 36px;
+  }
+  .nav-wrapper {
+    padding: 12px;
+  }
+  .nav-wrapper > .nav > li {
+    display: block;
+
+    height: 12px;
+    padding: 8px 0;
+  }
+  /*.nav-wrapper > .nav > .divider {*/
+    /*display: none;*/
+  /*}*/
+  .digest-signup {
+    display: none;
+  }
+  .page {
+    padding: 12px;
+  }
 }
+
+
+
 
 
 

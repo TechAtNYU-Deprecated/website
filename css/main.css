@@ -18,7 +18,7 @@ textarea {
 
 body {
   font-size: 1em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
 }
 
@@ -44,7 +44,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -85,15 +85,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-a:hover {
-  color: #00BCF2;
-}
-
 @font-face {
   font-family: Systopie;
   src: url("/font/systopie_regular.otf");
@@ -115,8 +106,21 @@ a:hover {
   font-style: italic;
 }
 
+a, a:visited {
+  text-decoration: none;
+  color: #009ecc;
+  font-weight: bold;
+}
+a:hover, a:visited:hover {
+  color: #004f66;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Systopie, sans-serif;
+}
+
+img {
+  max-width: 100%;
 }
 
 .nav .divider {
@@ -128,25 +132,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
 }
 
-#hero img {
-  max-width: 100%;
-}
-
 #about {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: .5em;
+  margin-bottom: 2em;
 }
 
 @media only screen and (max-width: 35em) {
   .nav-pane {
     display: none;
   }
+
   #logo {
     height: 28px;
     width: 90px;
     margin: 4px;
   }
+
   #nav-title {
     position: fixed;
     top: 0;
@@ -156,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     background: #eee;
   }
+
   #menu {
     position: fixed;
     top: 36px;
@@ -164,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
     font: 12px Arial, Helvetica, sans-serif;
     background: #f8f8f8;
   }
+
   #menu-button {
     float: right;
     display: block;
@@ -172,29 +174,32 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     color: #111;
   }
+
   body {
     margin-top: 36px;
   }
+
   .nav-wrapper {
     padding: 12px;
   }
+
   .nav-wrapper > .nav > li {
     display: block;
-
     height: 12px;
     padding: 8px 0;
   }
+
   /*.nav-wrapper > .nav > .divider {*/
-    /*display: none;*/
+  /*display: none;*/
   /*}*/
   .digest-signup {
     display: none;
   }
+
   .page {
     padding: 12px;
   }
 }
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -329,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .page {
-    margin-left: 200px;
+    margin-left: 220px;
     padding: 2em 1em;
     display: block;
   }
@@ -344,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 2em auto;
   }
 }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 /* ==========================================================================
@@ -354,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -384,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 
