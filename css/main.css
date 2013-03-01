@@ -81,7 +81,8 @@ textarea {
     font-size: 12px;
     margin-bottom: .5em; }
   .nav ul {
-    margin-left: 10px; }
+    margin-left: 10px;
+    margin-bottom: 1em; }
 
 #hero img {
   max-width: 100%; }
