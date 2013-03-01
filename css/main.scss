@@ -97,9 +97,28 @@ textarea {
 
 
 
+.nav {
+    margin: 1em;
 
+    .divider {
+        font-size: 12px;
+        margin-bottom: .5em;
+    }
 
+    ul {
+        margin-left: 10px;
+    }
+}
 
+#hero img {
+    max-width: 100%;
+}
+
+#about {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: .5em;
+}
 
 
 
@@ -235,7 +254,7 @@ textarea {
 
   .digest-signup {
     width: 150px;
-    margin-left: 20px;
+    margin-left: 1em;
   }
 
   .page {
