@@ -18,9 +18,11 @@ textarea {
     color: #222;
 }
 
+$base-fonts: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
 body {
     font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $base-fonts;
     line-height: 1.4;
 }
 
@@ -122,7 +124,7 @@ a, a:visited {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Systopie, sans-serif;
+  font-family: Systopie, $base-fonts;
 }
 
 img {
@@ -168,7 +170,7 @@ img {
     top: 36px;
     left: 0;
     width: 100%;
-    font: 12px Arial, Helvetica, sans-serif;
+    font-size: 12px;
     background: #f8f8f8;
   }
   #menu-button {
@@ -191,15 +193,67 @@ img {
     height: 12px;
     padding: 8px 0;
   }
-  /*.nav-wrapper > .nav > .divider {*/
-    /*display: none;*/
-  /*}*/
   .digest-signup {
     display: none;
   }
   .page {
     padding: 12px;
   }
+}
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+
+  $nav-width: 220px;
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-pane {
+    width: $nav-width;
+    background-color: #fafafa;
+    border-right: 1px solid #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 3em 0;
+  }
+
+  .nav-wrapper {
+    margin-left: 20px;
+    padding: 2em 0;
+  }
+
+  .digest-signup {
+    padding: 2em 0;
+    width: 170px;
+    margin-left: 20px;
+
+    p {
+      font-size: 0.8em;
+      line-height: 1.2em;
+    }
+  }
+
+  .page {
+    margin-left: $nav-width;
+    padding: 2em 1em;
+    display: block;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .logo-wrapper {
+    width: 180px;
+    margin: 2em auto;
+  }
+
 }
 
 
@@ -317,65 +371,6 @@ img {
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-
-  $nav-width: 220px;
-
-  .container {
-    width: 100%;
-    margin: 0;
-  }
-
-  .nav-pane {
-    width: $nav-width;
-    background-color: #fafafa;
-    border-right: 1px solid #f0f0f0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    padding: 3em 0;
-  }
-
-  .nav-wrapper {
-    margin-left: 20px;
-    padding: 2em 0;
-  }
-
-  .digest-signup {
-    padding: 2em 0;
-    width: 170px;
-    margin-left: 20px;
-
-    p {
-      font-size: 0.8em;
-      line-height: 1.2em;
-    }
-  }
-
-  .page {
-    margin-left: $nav-width;
-    padding: 2em 1em;
-    display: block;
-  }
-
-  .content {
-    max-width: 720px;
-    margin: 0 auto;
-  }
-
-  .logo-wrapper {
-    width: 180px;
-    margin: 2em auto;
-    
-
-    .logo {
-    }
-  }
-
-}
 
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
