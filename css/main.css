@@ -96,24 +96,21 @@ a:hover {
 
 @font-face {
   font-family: Systopie;
-  src: url("fonts/systopie_regular.eot");
-  src: url("fonts/systopie_regular.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_regular.woff") format("woff"), url("fonts/systopie_regular.ttf") format("truetype"), url("fonts/systopie_regular.svg#Systopie") format("svg");
+  src: url("/font/systopie_regular.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Systopie;
-  src: url("fonts/systopie_bold.eot");
-  src: url("fonts/systopie_bold.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_bold.woff") format("woff"), url("fonts/systopie_bold.ttf") format("truetype"), url("fonts/systopie_bold.svg#Systopie") format("svg");
+  src: url("/font/systopie_bold.otf");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: Systopie;
-  src: url("fonts/systopie_italic.eot");
-  src: url("fonts/systopie_italic.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_italic.woff") format("woff"), url("fonts/systopie_italic.ttf") format("truetype"), url("fonts/systopie_italic.svg#Systopie") format("svg");
+  src: url("/font/systopie_italic.otf");
   font-weight: normal;
   font-style: italic;
 }

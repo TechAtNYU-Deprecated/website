@@ -109,19 +109,15 @@ a {
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
   @font-face {
       font-family: $font-family;
-      src: url('#{$file-path}.eot');
-      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-           url('#{$file-path}.woff') format('woff'),
-           url('#{$file-path}.ttf') format('truetype'),
-           url('#{$file-path}.svg##{$font-family}') format('svg');
+      src: url('#{$file-path}.otf');
       font-weight: $weight;
       font-style: $style;
   }
 }
 
-@include font-face(Systopie, 'fonts/systopie_regular');
-@include font-face(Systopie, 'fonts/systopie_bold', bold);
-@include font-face(Systopie, 'fonts/systopie_italic', normal, italic);
+@include font-face(Systopie, '/font/systopie_regular');
+@include font-face(Systopie, '/font/systopie_bold', bold);
+@include font-face(Systopie, '/font/systopie_italic', normal, italic);
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Systopie, sans-serif;
