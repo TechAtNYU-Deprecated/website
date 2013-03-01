@@ -6,6 +6,8 @@ var TAN = {};
   TAN.menuExpanded = false;
 
   $('#menu-button').click(function(event) {
+    event.preventDefault();
+
     if (TAN.menuExpanded) {
       $('#menu').hide();
       TAN.menuExpanded = false;
@@ -21,10 +23,9 @@ var TAN = {};
     var selected_id = $(this).attr('id');
     selected_id = selected_id.substring(0, selected_id.length - 4); // Length of '_nav' is 4
 
-    // Height of title bar is 36px
     var scrollPosition = $('#' + selected_id).position().top;
     if (TAN.menuExpanded) {
-      scrollPosition -= 36;
+      scrollPosition -= 36; // Height of title bar is 36px
     }
 
     $('html, body').animate({
