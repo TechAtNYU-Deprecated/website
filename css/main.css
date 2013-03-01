@@ -18,6 +18,7 @@ textarea {
 
 body {
   font-size: 1em;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.4;
 }
 
@@ -84,6 +85,43 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+a:hover {
+  color: #00BCF2;
+}
+
+@font-face {
+  font-family: Systopie;
+  src: url("fonts/systopie_regular.eot");
+  src: url("fonts/systopie_regular.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_regular.woff") format("woff"), url("fonts/systopie_regular.ttf") format("truetype"), url("fonts/systopie_regular.svg#Systopie") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Systopie;
+  src: url("fonts/systopie_bold.eot");
+  src: url("fonts/systopie_bold.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_bold.woff") format("woff"), url("fonts/systopie_bold.ttf") format("truetype"), url("fonts/systopie_bold.svg#Systopie") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Systopie;
+  src: url("fonts/systopie_italic.eot");
+  src: url("fonts/systopie_italic.eot?#iefix") format("embedded-opentype"), url("fonts/systopie_italic.woff") format("woff"), url("fonts/systopie_italic.ttf") format("truetype"), url("fonts/systopie_italic.svg#Systopie") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Systopie, sans-serif;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -193,16 +231,28 @@ textarea {
 
   .nav-pane {
     width: 200px;
-    background-color: #ccc;
+    background-color: #fafafa;
+    border-right: 1px solid #f0f0f0;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
+    padding: 3em 0;
+  }
+
+  .nav-wrapper {
+    margin-left: 20px;
+    padding: 2em 0;
   }
 
   .digest-signup {
+    padding: 2em 0;
     width: 150px;
     margin-left: 20px;
+  }
+  .digest-signup p {
+    font-size: 0.8em;
+    line-height: 1.2em;
   }
 
   .page {
@@ -214,6 +264,11 @@ textarea {
   .content {
     max-width: 720px;
     margin: 0 auto;
+  }
+
+  .logo-wrapper {
+    width: 180px;
+    margin: 2em auto;
   }
 }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {

@@ -20,6 +20,7 @@ textarea {
 
 body {
     font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.4;
 }
 
@@ -93,14 +94,38 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 
+  &:hover {
+    color: #00BCF2;
+  }
 
+}
 
+// Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
 
+@include font-face(Systopie, 'fonts/systopie_regular');
+@include font-face(Systopie, 'fonts/systopie_bold', bold);
+@include font-face(Systopie, 'fonts/systopie_italic', normal, italic);
 
-
-
-
+h1, h2, h3, h4, h5, h6 {
+  font-family: Systopie, sans-serif;
+}
 
 
 
@@ -226,16 +251,29 @@ textarea {
 
   .nav-pane {
     width: $nav-width;
-    background-color: #ccc;
+    background-color: #fafafa;
+    border-right: 1px solid #f0f0f0;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
+    padding: 3em 0;
+  }
+
+  .nav-wrapper {
+    margin-left: 20px;
+    padding: 2em 0;
   }
 
   .digest-signup {
+    padding: 2em 0;
     width: 150px;
     margin-left: 20px;
+
+    p {
+      font-size: 0.8em;
+      line-height: 1.2em;
+    }
   }
 
   .page {
@@ -247,6 +285,15 @@ textarea {
   .content {
     max-width: 720px;
     margin: 0 auto;
+  }
+
+  .logo-wrapper {
+    width: 180px;
+    margin: 2em auto;
+    
+
+    .logo {
+    }
   }
 
 }
