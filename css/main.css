@@ -85,13 +85,24 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.container {
+  margin: 1em;
+}
+
 a {
   text-decoration: none;
-  color: #333;
+  color: #231f20;
   font-weight: bold;
 }
 a:hover {
   color: #00BCF2;
+}
+
+.content a {
+  border-bottom: 1px dashed #cccccc;
+}
+.content h1 a, .content h2 a, .content h3 a, .content h4 a, .content h5 a, .content h6 a {
+  border: none;
 }
 
 @font-face {
@@ -128,14 +139,29 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
 }
 
-#hero img {
+img {
   max-width: 100%;
 }
 
-#about {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: .5em;
+section {
+  padding: 2em 0;
+  border-bottom: 2px solid #00bcf2;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.event p {
+  margin: 0;
+  padding: 0;
+}
+.event .date, .event .join {
+  font-size: 0.8em;
 }
 
 /* ==========================================================================
@@ -246,7 +272,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav-pane {
-    width: 220px;
+    width: 200px;
     background-color: #fafafa;
     border-right: 1px solid #f0f0f0;
     position: fixed;
@@ -263,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .digest-signup {
     padding: 2em 0;
-    width: 170px;
+    width: 150px;
     margin-left: 20px;
   }
   .digest-signup p {
@@ -278,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .content {
-    max-width: 720px;
+    max-width: 640px;
     margin: 0 auto;
   }
 

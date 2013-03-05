@@ -94,15 +94,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.container {
+  margin: 1em;
+}
+
 a {
   text-decoration: none;
-  color: #333;
+  color: #231f20;
   font-weight: bold;
 
   &:hover {
     color: #00BCF2;
   }
+}
 
+.content {
+  a {
+    border-bottom: 1px dashed #ccc;
+  }
+
+  h1, h2, h3, h4, h5, h6 {   
+    a { border: none; }
+  }
 }
 
 // Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
@@ -121,6 +134,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Systopie, sans-serif;
+
 }
 
 .nav {
@@ -135,21 +149,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#hero img {
+img {
   max-width: 100%;
 }
 
-#about {
-  font-size: 24px;
-  font-weight: bold;
-  margin-top: .5em;
+
+section {
+  padding: 2em 0;
+  border-bottom: 2px solid #00BCF2;
 }
 
+.left { float: left; }
+.right { float: right; }
 
+.event {
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
-
-
-
+  .date, .join {
+    font-size: 0.8em;
+  }
+}
 
 /* ==========================================================================
    Helper classes
@@ -302,17 +324,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .content {
-    max-width: 720px;
+    max-width: 640px;
     margin: 0 auto;
   }
 
   .logo-wrapper {
     width: 180px;
     margin: 2em auto;
-    
-
-    .logo {
-    }
   }
 
 }
