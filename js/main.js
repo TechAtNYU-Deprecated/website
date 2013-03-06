@@ -14,6 +14,18 @@ var TAN = {
   setEvents: function (){
     this.$menuButton.click(this.toggleMenu);
     this.$navActions.click(this.scrollNav);
+    $(window).resize(this.resizeMenu);
+  },
+  hideMenu: function() {
+    TAN.$menu.hide();
+    TAN.menuExpanded = false;
+  },
+  resizeMenu: function() {
+    if (window.matchMedia('(max-width: 35em)').matches) {
+      TAN.hideMenu();
+    } else {
+      TAN.showMenu();
+    }
   },
   scrollNav: function(event) {
     event.preventDefault();
@@ -27,18 +39,19 @@ var TAN = {
       scrollTop: scrollPosition
     }, 'slow');
     if (TAN.menuExpanded) {
-      TAN.$menu.hide();
-      TAN.menuExpanded = false;
+      TAN.hideMenu();
     }
+  },
+  showMenu: function() {
+    TAN.$menu.show();
+    TAN.menuExpanded = true;
   },
   toggleMenu: function(event) {
     event.preventDefault();
     if (TAN.menuExpanded) {
-      TAN.$menu.hide();
-      TAN.menuExpanded = false;
+      TAN.hideMenu();
     } else {
-      TAN.$menu.show();
-      TAN.menuExpanded = true;
+      TAN.showMenu();
     }
   }
 };
