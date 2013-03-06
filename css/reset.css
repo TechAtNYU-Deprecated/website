@@ -1,0 +1,59 @@
+/***** RESET (some of these elements no longer exist—like applet, font, & acronym—but i've left most of them because it can only help). *****/
+
+/* Basic Meyer-esque Reset, not including links, lists, or <q>/<blockquote> */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video  
+{margin:0;padding:0;border:0;font:inherit;outline:0;font-size:100%;vertical-align: baseline;background:transparent;} 
+body { line-height: 1; } table{border-collapse:collapse;border-spacing:0;}
+
+/* my reset additions */
+a {margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline;background:transparent} /* Add back the Meyer Reset on  <a>'s except for outline, which we often want to leave native  */
+button, input, select, textarea, optgroup, option { margin: 0; font-size:100%; line-height: inherit !important; /* FF */} /* form resets */
+	
+/* yui reset additions */
+html{color:#000; background:#FFF; }
+caption,th{text-align:left; }
+legend { color:#000; /*because legend doesn't inherit in IE */ }
+input,textarea,select{ font-family:inherit; font-size:inherit; font-weight:inherit; }
+	
+/* CAN I DO MORE EXTENSIVE FORM RESET W/O HURTING NATIVE FEEL?
+    YES: http://formalize.me/, though I wouldn't take it quite so far.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+
+/* HTML5 element display */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; font-size:100%; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	
+/* normalizers — i.e. that make cross-browser behavior consistent, rather than the "blast-it-all-out" reset */
+textarea { overflow: auto; } /* Tweak for IE www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+legend { *margin-left: -7px; } /* IE always shifts legends right by 7px (regardless of text size). */
+img { -ms-interpolation-mode: bicubic; } /* Fix IE7's nasty image resizing */
+svg:not(:root) { overflow: hidden; } /* Correct overflow displayed oddly in IE9 */
+/* 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ * 2. Correct inner spacing displayed oddly in IE6/7 http://is.gd/hVSb4W */
+button, input { line-height: normal; *overflow: visible; *width: auto; }
+/* Allows styling of clickable form elements in iOS */
+button, input[type="reset"], input[type="button"], input[type="submit"] { -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+button, input, select { vertical-align: baseline; *vertical-align: middle; }
+textarea { vertical-align: top; }
+/* Remove inner padding in FF3/4. Must keep border or we change element's visual character; introduce browser discrepancies 
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+button::-moz-focus-inner, input::-moz-focus-inner { padding: 0; }
+/* Declare sans-serif fallback for proper sizing: en.wikipedia.org/wiki/User:Davidgothberg/Test59 */
+pre, code, kbd, samp, tt { font-family: monospace, sans-serif; _font-family: 'courier new', monospace; }

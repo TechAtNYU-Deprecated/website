@@ -1,0 +1,149 @@
+/* FONTS **********************************************************************/
+
+// Bourbon Mixin for top notch webfont support: https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_font-face.scss
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.otf');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
+@include font-face(Systopie, '/font/systopie_regular');
+@include font-face(Systopie, '/font/systopie_bold', bold);
+@include font-face(Systopie, '/font/systopie_italic', normal, italic);
+
+/******************************************************************************/
+
+/* TYPOGRAPHY *****************************************************************/
+
+$link-color: #009ECC;
+
+a, a:visited {
+  text-decoration: none;
+  color: $link-color;
+  font-weight: bold;
+
+  &:hover {
+    color: darken($link-color, 20%);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Systopie, $base-fonts;
+
+  a { border: none; }
+}
+
+/*******************************************************************************/
+
+/* ELEMENTS ********************************************************************/
+
+section {
+  padding: 2em 0;
+  border-bottom: 2px solid #00BCF2;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*******************************************************************************/
+
+/* UTILITIES *******************************************************************/
+
+.left {  float: left; }
+.right { float: right; }
+.invisible { opacity: 0; }
+
+/*******************************************************************************/
+
+/* CUSTOM DEFAULTS *************************************************************/
+
+.page {
+  padding: 2em 1em;
+}
+
+.content {
+  a {
+    border-bottom: 1px dashed #ccc;
+  }
+}
+
+.event {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .date, .join {
+    font-size: 0.8em;
+  }
+}
+
+.nav {
+  .divider {
+    font-size: 12px;
+    margin-bottom: .5em;
+  }
+
+  ul {
+    margin-left: 10px;
+    margin-bottom: 1em;
+  }
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.hackers {
+  line-height: 24px;
+  color: #777;
+  font-style: italic;
+}
+
+#about p {
+  text-align: center;
+}
+
+#leadership {
+  li {
+    width: 145px;
+    height: 200px;
+    background-color: red;
+    float: left;
+    margin: 0 5px 5px 0;
+  }
+}
+
+
+/* "MOBILE FIRST" (i.e. will change) ****************************************/
+
+.logo       { display: none; }
+.nav-digest { display: block; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************************/
+
+
+
+
+
+
+
+

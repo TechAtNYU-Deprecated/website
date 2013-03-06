@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <meta property="og:site_name" content="Tech@NYU"/>
+        <meta property="og:title" content="{{ page.title }}"/>
+        <meta itemprop="name" content="{{ page.title }}"/>
+        <meta property="og:url" content="http://techatnyu.org/"/>
+        <meta itemprop="url" content="http://techatnyu.org/"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="http://techatnyu.org/img/logo.png"/>
+        <meta itemprop="image" content="http://techatnyu.org/img/logo.png"/>
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/base.css">
+        <link rel="stylesheet" href="/css/combined.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+      <!--[if lt IE 7]>
+          <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- JS -->
+      <div class="container">
+        <div id="nav-title">
+          <img id="logo" src="/img/techatnyu_180.png">
+          <a id="menu-button" href="#">&#9776</div>
+        </div>
+        <div id="menu" class="nav-pane">
+          <div class="nav-wrapper">
+            <ul class="nav">
+              <li><a id="about_nav" class="nav-action" href="#">About</a></li>
+              <li class="nav-digest"><a target="_blank" href="http://eepurl.com/c3BM2">The Tech@NYU Digest</a></li>
+              <div class="divider">Initiatives</div>
+              <ul>
+                <li><a id="demodays_nav" target="_blank" class="nav-action" href="http://www.meetup.com/demodays/">DemoDays</a></li>
+                <li><a id="designdays_nav" target="_blank" class="nav-action" href="http://www.meetup.com/Product-Design-Workshop/">DesignDays</a></li>
+                <li><a id="hackdays_nav" target="_blank" class="nav-action" href="http://www.meetup.com/nyhackdays/">HackDays</a></li>
+                <li><a id="startup_week_nav" class="nav-action" href="#">Startup Week</a></li>
+                <li><a href="404">Other initiatives</a></li>
+              </ul>
+              <li><a href="/leadership/">Leadership</a></li>
+              <li><a href="#" id="resources_nav" class="nav-action">Resources</a></li>
+              <li><a href="fix">Job Board</a></li>
+              <li><a href="#" id="press_nav" class="nav-action">Press</a></li>
+              <li><a href="#" id="contact_nav" class="nav-action">Contact</a></li>
+            </ul>
+          </div>
+          <div class="digest-signup">
+            <h6>Tech@NYU Email Digest</h5>
+            <p class="small">This biweekly email digest goes out to 4,500 across NYC, informing you of Tech@NYU initiatives and other events for students and technologists.</p>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="submit" value="Sign up for digest" />
+          </div>
+        </div>
+
+
+        <div class="page">
+          <div class="content">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
