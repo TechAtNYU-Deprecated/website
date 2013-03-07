@@ -19,7 +19,6 @@ textarea {
 
 body {
   font-size: 1em;
-  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
 
@@ -45,7 +44,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -202,6 +201,10 @@ textarea {
 
 /******************************************************************************/
 /* TYPOGRAPHY *****************************************************************/
+body {
+  font-family: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 a, a:visited {
   text-decoration: none;
   color: #009ecc;
@@ -218,11 +221,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   border: none;
 }
 
+.tagline {
+  font-size: 24px;
+}
+
 /*******************************************************************************/
 /* ELEMENTS ********************************************************************/
 section {
   padding: 2em 0;
-  border-bottom: 2px solid #00bcf2;
+  border-bottom: 2px solid #00BCF2;
 }
 
 img {
@@ -254,7 +261,7 @@ a .small {
 }
 
 .content a {
-  border-bottom: 1px dashed #cccccc;
+  border-bottom: 1px dashed #ccc;
 }
 
 .featured.event {
@@ -272,7 +279,7 @@ a .small {
 .event {
   clear: both;
   padding: 1em 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eee;
   height: 190px;
 }
 .event:first-child {
@@ -283,7 +290,7 @@ a .small {
   padding-bottom: 0;
 }
 .event p {
-  margin: 0.1em;
+  margin: .5em 0;
 }
 
 .event .photo {
@@ -298,7 +305,7 @@ a .small {
   height: auto;
 }
 
-.date, .join {
+.date {
   font-size: 0.8em;
 }
 
@@ -326,6 +333,10 @@ a .small {
   text-align: center;
 }
 
+.video {
+  margin-bottom: 1em;
+}
+
 #leadership {
   border: none;
 }
@@ -333,6 +344,7 @@ a .small {
   width: 140px;
   height: 280px;
   float: left;
+  color: #333;
   margin: 0 5px 5px 0;
 }
 #leadership li p {
@@ -341,6 +353,7 @@ a .small {
 #leadership li .backpic {
   width: 140px;
   height: 200px;
+  margin-bottom: 10px;
 }
 #leadership .advisor {
   height: 360px;
@@ -476,7 +489,7 @@ a .small {
     font-size: 80%;
   }
 }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 /* ==========================================================================
@@ -486,7 +499,7 @@ a .small {
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
+    color: #000 !important;
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important;
@@ -516,7 +529,7 @@ a .small {
 
   pre,
   blockquote {
-    border: 1px solid #999999;
+    border: 1px solid #999;
     page-break-inside: avoid;
   }
 

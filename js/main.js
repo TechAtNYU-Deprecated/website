@@ -32,7 +32,6 @@ var TAN = {
     }
   },
   scrollNav: function(event) {
-    console.log($(this).attr('href')[0]);
     if ($(this).attr('href')[0] === "#") {
       event.preventDefault();
       var selected_id = $(this).attr('id');

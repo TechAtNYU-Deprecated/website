@@ -8,7 +8,7 @@ Usage instructions
 
 Start the SASS compiler:
 
-`sass --watch css/main.scss:css/main.css --style expanded`
+`sass --watch css/combined.scss --style expanded`
 
 Start the Jekyll server:
 

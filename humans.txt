@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Wylie Conlon -- Developer -- @wylie
+    Wylie Conlon -- Developer -- @wylieconlon
     Henry Tian   -- Developer -- @htian
     Vivek Patel  -- Developer -- @revivek
 

@@ -18,6 +18,12 @@
 
 /* TYPOGRAPHY *****************************************************************/
 
+$base-fonts: "Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+body {
+  font-family: $base-fonts;
+}
+
 $link-color: #009ECC;
 
 a, a:visited {
@@ -34,6 +40,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Systopie, $base-fonts;
 
   a { border: none; }
+}
+
+.tagline {
+  font-size: 24px;
 }
 
 /*******************************************************************************/
@@ -89,7 +99,7 @@ a .small { font-weight: normal; }
 
   &:first-child { border-top: none; }
   &:last-child { margin-bottom: 0; padding-bottom: 0; }
-  p { margin: 0.1em; }
+  p { margin: .5em 0; }
 }
 
 .event .photo {
@@ -105,7 +115,7 @@ a .small { font-weight: normal; }
   }
 }
 
-.date, .join {
+.date {
   font-size: 0.8em;
 }
 
@@ -137,6 +147,10 @@ a .small { font-weight: normal; }
   text-align: center;
 }
 
+.video {
+  margin-bottom: 1em;
+}
+
 #leadership {
   $leader-width: 140px;
   $leader-pic-height: 200px;
@@ -146,6 +160,7 @@ a .small { font-weight: normal; }
     width: $leader-width;
     height: $leader-height;
     float: left;
+    color: #333;
     margin: 0 5px 5px 0;
 
     p { line-height: 1.2em; }
@@ -153,6 +168,7 @@ a .small { font-weight: normal; }
     .backpic {
       width: $leader-width;
       height: $leader-pic-height;
+      margin-bottom: 10px;
     }
   }
 
