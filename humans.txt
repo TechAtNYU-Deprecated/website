@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Wylie Conlon -- Developer -- @wylie
+    Henry Tian   -- Developer -- @htian
+    Vivek Patel  -- Developer -- @revivek
 
 # THANKS
 
-    <name>
+  Ethan, Sophie, as well as ChatID for hosting us.
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     Normalize.css, jQuery, Modernizr
+    Skeleton
+    Jekyll
