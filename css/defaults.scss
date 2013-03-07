@@ -56,6 +56,7 @@ img {
 .left {  float: left; }
 .right { float: right; }
 .invisible { opacity: 0; }
+a .small { font-weight: normal; }
 
 /*******************************************************************************/
 
@@ -71,16 +72,43 @@ img {
   }
 }
 
-.event {
-  p {
-    margin: 0;
-    padding: 0;
+.featured.event { height: auto; }
+.featured {
+  .title {
+    font-size: 64px;
+    line-height: 72px * 1.2;
   }
+  font-size: 120%;
+}
 
-  .date, .join {
-    font-size: 0.8em;
+.event {
+  clear: both;
+  padding: 1em 0;
+  border-top: 1px solid #eee;
+  height: 190px;
+
+  &:first-child { border-top: none; }
+  &:last-child { margin-bottom: 0; padding-bottom: 0; }
+  p { margin: 0.1em; }
+}
+
+.event .photo {
+  width: 30%;
+  height: 200px;
+  overflow: hidden;
+  margin-right: 10px;
+  float: left;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
+
+.date, .join {
+  font-size: 0.8em;
+}
+
 
 .nav {
   .divider {
@@ -110,13 +138,29 @@ img {
 }
 
 #leadership {
+  $leader-width: 140px;
+  $leader-pic-height: 200px;
+  $leader-height: 280px;
+
   li {
-    width: 145px;
-    height: 200px;
-    background-color: red;
+    width: $leader-width;
+    height: $leader-height;
     float: left;
     margin: 0 5px 5px 0;
+
+    p { line-height: 1.2em; }
+
+    .backpic {
+      width: $leader-width;
+      height: $leader-pic-height;
+    }
   }
+
+  .advisor {
+    height: $leader-height + 80;
+  }
+
+  border: none;
 }
 
 

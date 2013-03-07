@@ -1,5 +1,9 @@
 'use strict';
 
+$(document).ready(function(){
+    $(".video").fitVids();
+  });
+
 var TAN = {
   init: function() {
     this.menuExpanded = false;
@@ -28,18 +32,21 @@ var TAN = {
     }
   },
   scrollNav: function(event) {
-    event.preventDefault();
-    var selected_id = $(this).attr('id');
-    selected_id = selected_id.substring(0, selected_id.length - 4); // Length of '_nav' is 4
-    var scrollPosition = $('#' + selected_id).position().top;
-    if (TAN.menuExpanded) {
-      scrollPosition -= 36; // Height of title bar is 36px
-    }
-    $('html, body').animate({
-      scrollTop: scrollPosition
-    }, 'slow');
-    if (TAN.menuExpanded) {
-      TAN.hideMenu();
+    console.log($(this).attr('href')[0]);
+    if ($(this).attr('href')[0] === "#") {
+      event.preventDefault();
+      var selected_id = $(this).attr('id');
+      selected_id = selected_id.substring(0, selected_id.length - 4); // Length of '_nav' is 4
+      var scrollPosition = $('#' + selected_id).position().top;
+      if (TAN.menuExpanded) {
+        scrollPosition -= 36; // Height of title bar is 36px
+      }
+      $('html, body').animate({
+        scrollTop: scrollPosition
+      }, 'slow');
+      if (TAN.menuExpanded) {
+        TAN.hideMenu();
+      }
     }
   },
   showMenu: function() {

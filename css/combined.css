@@ -243,6 +243,10 @@ img {
   opacity: 0;
 }
 
+a .small {
+  font-weight: normal;
+}
+
 /*******************************************************************************/
 /* CUSTOM DEFAULTS *************************************************************/
 .page {
@@ -253,11 +257,48 @@ img {
   border-bottom: 1px dashed #cccccc;
 }
 
-.event p {
-  margin: 0;
-  padding: 0;
+.featured.event {
+  height: auto;
 }
-.event .date, .event .join {
+
+.featured {
+  font-size: 120%;
+}
+.featured .title {
+  font-size: 64px;
+  line-height: 86.4px;
+}
+
+.event {
+  clear: both;
+  padding: 1em 0;
+  border-top: 1px solid #eeeeee;
+  height: 190px;
+}
+.event:first-child {
+  border-top: none;
+}
+.event:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.event p {
+  margin: 0.1em;
+}
+
+.event .photo {
+  width: 30%;
+  height: 200px;
+  overflow: hidden;
+  margin-right: 10px;
+  float: left;
+}
+.event .photo img {
+  width: 100%;
+  height: auto;
+}
+
+.date, .join {
   font-size: 0.8em;
 }
 
@@ -285,12 +326,24 @@ img {
   text-align: center;
 }
 
+#leadership {
+  border: none;
+}
 #leadership li {
-  width: 145px;
-  height: 200px;
-  background-color: red;
+  width: 140px;
+  height: 280px;
   float: left;
   margin: 0 5px 5px 0;
+}
+#leadership li p {
+  line-height: 1.2em;
+}
+#leadership li .backpic {
+  width: 140px;
+  height: 200px;
+}
+#leadership .advisor {
+  height: 360px;
 }
 
 /* "MOBILE FIRST" (i.e. will change) ****************************************/
@@ -417,6 +470,10 @@ img {
 
   .digest-signup {
     display: none;
+  }
+
+  .description {
+    font-size: 80%;
   }
 }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
