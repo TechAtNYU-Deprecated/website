@@ -20,15 +20,13 @@ var TAN = {
     this.$navActions.click(this.scrollNav);
     $(window).resize(this.resizeMenu);
   },
-  hideMenu: function() {
-    TAN.$menu.hide();
-    TAN.menuExpanded = false;
-  },
   resizeMenu: function() {
     if (window.matchMedia('(max-width: 35em)').matches) {
-      TAN.hideMenu();
+      TAN.$menu.hide();
+      TAN.menuExpanded = false;
     } else {
-      TAN.showMenu();
+      TAN.$menu.show();
+      TAN.menuExpanded = true;
     }
   },
   scrollNav: function(event) {
@@ -41,24 +39,23 @@ var TAN = {
       }
       $('html, body').animate({
         scrollTop: scrollPosition
-      }, 'slow');
+      }, 200);
       if (TAN.menuExpanded) {
-        TAN.hideMenu();
+        TAN.$menu.hide();
+        TAN.menuExpanded = false;
       }
     } else if ($(this).attr('href')[0] === "#") {
       event.preventDefault();
     }
   },
-  showMenu: function() {
-    TAN.$menu.show();
-    TAN.menuExpanded = true;
-  },
   toggleMenu: function(event) {
     event.preventDefault();
     if (TAN.menuExpanded) {
-      TAN.hideMenu();
+      TAN.$menu.slideUp(200);
+      TAN.menuExpanded = false;
     } else {
-      TAN.showMenu();
+      TAN.$menu.slideDown(200);
+      TAN.menuExpanded = true;
     }
   }
 };
