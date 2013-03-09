@@ -32,10 +32,9 @@ var TAN = {
     }
   },
   scrollNav: function(event) {
-    if ($(this).attr('href')[0] === "#") {
-      event.preventDefault();
+    if ($(this).attr('href').substr(0, 2) === "/#") {
       var selected_id = $(this).attr('id');
-      selected_id = selected_id.substring(0, selected_id.length - 4); // Length of '_nav' is 4
+      selected_id = selected_id.substr(0, selected_id.length - 4); // Length of '-nav' is 4
       var scrollPosition = $('#' + selected_id).position().top;
       if (TAN.menuExpanded) {
         scrollPosition -= 36; // Height of title bar is 36px
@@ -46,6 +45,8 @@ var TAN = {
       if (TAN.menuExpanded) {
         TAN.hideMenu();
       }
+    } else if ($(this).attr('href')[0] === "#") {
+      event.preventDefault();
     }
   },
   showMenu: function() {
